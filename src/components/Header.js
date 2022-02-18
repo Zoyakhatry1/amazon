@@ -5,8 +5,10 @@ import {
     SearchIcon,
     ShoppingCartIcon,
 } from "@heroicons/react/outline";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 function Header() {
+  const { data: session } = useSession();
   return (
     <header>
     {/* top nav */}
@@ -29,9 +31,9 @@ function Header() {
 
        {/* right */}
        <div className='text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap'>
-           <div className='link'>
+           <div onClick={!session?()=>signIn():()=>signOut()} className='link'>
               <p>
-                Hello Zoya
+               {session?`Hello, ${session.user.name}`:"Sign In"}
               </p>
               <p className='font-extrabold md:text-sm'>{"Account & Lists"}</p>
            </div>
