@@ -7,8 +7,14 @@ export default NextAuth({
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
+      authorization: {
+        params: {
+          prompt: "consent",
+          access_type: "offline",
+          response_type: "code"
+        }
+      }
     }),
     // ...add more providers here
   ],
-  secret:"DbS4NA1242/tYqgiUfzuLFpSe2KzyxRZs9mr5i9XFys="
 })
