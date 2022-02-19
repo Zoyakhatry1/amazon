@@ -9,7 +9,7 @@ import CheckoutItem from '../components/CheckoutItem';
 import { useSession } from "next-auth/react";
 
 
-function checkout() {
+function Checkout() {
   const { data: session } = useSession();
  
   const items=useSelector(selectItems);
@@ -71,4 +71,4 @@ function checkout() {
   )
 }
 
-export default checkout;
+export default Checkout;
