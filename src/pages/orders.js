@@ -32,6 +32,7 @@ function Orders({orders}) {
             {id,amount,amountShipping,items,timestamp,images}
          )=>(
             <Order 
+                key={id}
                 id={id}
                 amount={amount}
                 amountShipping={amountShipping}
