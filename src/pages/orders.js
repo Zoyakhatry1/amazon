@@ -30,9 +30,9 @@ function Orders({orders}) {
        <div className='mt-5 space-y-4'>
          {orders?.map((
             {id,amount,amountShipping,items,timestamp,images}
-         )=>(
+         ,i)=>(
             <Order 
-                key={id}
+                key={i}
                 id={id}
                 amount={amount}
                 amountShipping={amountShipping}
