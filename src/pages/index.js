@@ -11,6 +11,7 @@ export default function Home(props) {
     <div>
       <Head>
         <title>Amazon 2.0</title>
+        <meta name="google-site-verification" content="J33zdLY8ml8nYhefCrXpKXIvPp3YLo5lz0goKBc5ZL4" />
       </Head>
       
       <Header />
